@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> | G-M |</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href='./css/all.css'>
+
+</head>
+
+<body>
+    <div class="ui">
+        <div class="main-column" id="left-column">
+            <div class="notebook">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="inventory-tab" data-toggle="tab" href="#inventory">Inventory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="equipment-tab" data-toggle="tab" href="#equipment">Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="powers-tab" data-toggle="tab" href="#powers">Powers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="codex-tab" data-toggle="tab" href="#codex">Codex</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="friends-tab" data-toggle="tab" href="#friends">Friends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="system-tab" data-toggle="tab" href="#system">System</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane show active" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
+                        <div class="money-bar">
+                            <p>Gold</p>
+                            <div id='player-gold'></div>
+                        </div>
+                        <div class="inventory-grid">
+                            <div class="inventory-grid-row">
+                                <div id="inventory-node-0-0" class="inventory-node"></div>
+                                <div id="inventory-node-0-1" class="inventory-node"></div>
+                                <div id="inventory-node-0-2" class="inventory-node"></div>
+                                <div id="inventory-node-0-3" class="inventory-node"></div>
+                                <div id="inventory-node-0-4" class="inventory-node"></div>
+                                <div id="inventory-node-0-5" class="inventory-node"></div>
+                            </div>
+                            <div class="inventory-grid-row">
+                                <div id="inventory-node-1-0" class="inventory-node"></div>
+                                <div id="inventory-node-1-1" class="inventory-node"></div>
+                                <div id="inventory-node-1-2" class="inventory-node"></div>
+                                <div id="inventory-node-1-3" class="inventory-node"></div>
+                                <div id="inventory-node-1-4" class="inventory-node"></div>
+                                <div id="inventory-node-1-5" class="inventory-node"></div>
+                            </div>
+                            <div class="inventory-grid-row">
+                                <div id="inventory-node-2-0" class="inventory-node"></div>
+                                <div id="inventory-node-2-1" class="inventory-node"></div>
+                                <div id="inventory-node-2-2" class="inventory-node"></div>
+                                <div id="inventory-node-2-3" class="inventory-node"></div>
+                                <div id="inventory-node-2-4" class="inventory-node"></div>
+                                <div id="inventory-node-2-5" class="inventory-node"></div>
+                            </div>
+                        </div>
+                        <div class="inventory-nav">
+                            <a class="inventory-nav--arrow" id="inventory-left-arrow" href="#"><i
+                                    class="fal fa-arrow-circle-left"></i></a>
+                            <a class="inventory-nav--arrow" id="inventory-right-arrow" href="#"><i
+                                    class="fal fa-arrow-circle-right"></i></a>
+                        </div>
+                        <div class="inventory-detail">
+                            <div class="inventory-detail--title-bar">
+                                <div class="inventory-detail--title-bar-name"></div>
+                                <div class="inventory-detail--title-bar-rarity"></div>
+                            </div>
+                            <div class="inventory-detail--body">
+                                <div class="inventory-detail--body-type"></div>
+                                <div class="inventory-detail--body-damage"></div>
+                                <div class="inventory-detail--body-description"></div>
+                                <div class="inventory-detail--body-button-container">
+                                    <button class="inventory-detail--button inventory-detail--body-equip">Equip</button>
+                                    <button class="inventory-detail--button inventory-detail--body-drop">Drop</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="equipment" role="tabpanel" aria-labelledby="equipment-tab">
+                        <div class="equipment-container">
+                            <div class="equipment-container--col1">
+                                <div class="equipment-char-name"></div>
+                                <div class="equip-box" id="rightHandSlot">
+                                    <div class="equip-box-label">Right</div>
+                                </div>
+                            </div>
+                            <div class="equipment-container--col2">
+                                <div class="equip-box" id="headSlot">
+                                    <div class="equip-box-label">Head</div>
+                                </div>
+                                <div class="equip-box" id="chestSlot">
+                                    <div class="equip-box-label">Chest</div>
+                                </div>
+                                <div class="equip-box" id="legsSlot">
+                                    <div class="equip-box-label">Legs</div>
+                                </div>
+                                <div class="equip-box" id="feetSlot">
+                                    <div class="equip-box-label">Feet</div>
+                                </div>
+                            </div>
+                            <div class="equipment-container--col3">
+                                <div class="equip-box" id="leftHandSlot">
+                                    <div class="equip-box-label">Left</div>
+                                </div>
+                                <div class="equip-box" id="accessorySlot">
+                                    <div class="equip-box-label">Accessory</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipment-detail">
+                            <div class="equipment-detail--title-bar">
+                                <div class="equipment-detail--title-bar-name"></div>
+                                <div class="equipment-detail--title-bar-rarity"></div>
+                            </div>
+                            <div class="equipment-detail--body">
+                                <div class="equipment-detail--body-type"></div>
+                                <div class="equipment-detail--body-damage"></div>
+                                <div class="equipment-detail--body-description"></div>
+                                <div class="equipment-detail--body-button-container">
+                                    <button
+                                        class="equipment-detail--button equipment-detail--body-unequip">Unequip</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipment-player-stats">
+                            <p>Attack bonus<p id='player-attackFromEquipment'>0</p>
+                            </p>
+                            <p>Sorcery <p id='player-magicFromEquipment'>0</p>
+                            </p>
+                            <p>Equipment armor <p id='player-armorFromEquipment'>0</p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="powers">POWERS</div>
+                    <div class="tab-pane" id="codex">
+                        <div class="codex-container">
+                            <div class="nav nav-tabs codex-container-tabs">
+                                <div class="nav-link codex-container-tabs-tab" id='reference-tab' data-toggle="pill"
+                                    href="#reference">
+                                    Reference</div>
+                                <div class="nav-link active codex-container-tabs-tab" data-toggle="pill" href="#quests">
+                                    Quests</div>
+                            </div>
+                            <div class="tab-content codex-container-body">
+                                <div class="tab-pane active codex-container-tabs-quests" id="quests"></div>
+                                <div class="tab-pane" id="reference"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="friends">FRIENDS</div>
+                    <div class="tab-pane" id="system">SYSTEM</div>
+                </div>
+
+
+            </div>
+            <div class="place-time-indicator">
+                <div id="place-time-indicator--time">8:00PM</div>
+                <div id="place-time-indicator--place">The Tavern</div>
+            </div>
+            <div class="minimap-container">
+                <img id='minimap-img'>
+                <div class="minimap-container-row">
+                    <a id="minimap-node-0-0" class="minimap-node"></a>
+                    <a id="minimap-node-0-1" class="minimap-node"></a>
+                    <a id="minimap-node-0-2" class="minimap-node"></a>
+                    <a id="minimap-node-0-3" class="minimap-node"></a>
+                    <a id="minimap-node-0-4" class="minimap-node"></a>
+                    <a id="minimap-node-0-5" class="minimap-node"></a>
+                    <a id="minimap-node-0-6" class="minimap-node"></a>
+                    <a id="minimap-node-0-7" class="minimap-node"></a>
+                </div>
+                <div class="minimap-container-row">
+                    <a id="minimap-node-1-0" class="minimap-node"></a>
+                    <a id="minimap-node-1-1" class="minimap-node"></a>
+                    <a id="minimap-node-1-2" class="minimap-node"></a>
+                    <a id="minimap-node-1-3" class="minimap-node"></a>
+                    <a id="minimap-node-1-4" class="minimap-node"></a>
+                    <a id="minimap-node-1-5" class="minimap-node"></a>
+                    <a id="minimap-node-1-6" class="minimap-node"></a>
+                    <a id="minimap-node-1-7" class="minimap-node"></a>
+                </div>
+                <div class="minimap-container-row">
+                    <a id="minimap-node-2-0" class="minimap-node"></a>
+                    <a id="minimap-node-2-1" class="minimap-node"></a>
+                    <a id="minimap-node-2-2" class="minimap-node"></a>
+                    <a id="minimap-node-2-3" class="minimap-node"></a>
+                    <a id="minimap-node-2-4" class="minimap-node"></a>
+                    <a id="minimap-node-2-5" class="minimap-node"></a>
+                    <a id="minimap-node-2-6" class="minimap-node"></a>
+                    <a id="minimap-node-2-7" class="minimap-node"></a>
+                </div>
+                <div class="minimap-container-row">
+                    <a id="minimap-node-3-0" class="minimap-node"></a>
+                    <a id="minimap-node-3-1" class="minimap-node"></a>
+                    <a id="minimap-node-3-2" class="minimap-node"></a>
+                    <a id="minimap-node-3-3" class="minimap-node"></a>
+                    <a id="minimap-node-3-4" class="minimap-node"></a>
+                    <a id="minimap-node-3-5" class="minimap-node"></a>
+                    <a id="minimap-node-3-6" class="minimap-node"></a>
+                    <a id="minimap-node-3-7" class="minimap-node"></a>
+                </div>
+                <div class="minimap-container-row">
+                    <a id="minimap-node-4-0" class="minimap-node"></a>
+                    <a id="minimap-node-4-1" class="minimap-node"></a>
+                    <a id="minimap-node-4-2" class="minimap-node"></a>
+                    <a id="minimap-node-4-3" class="minimap-node"></a>
+                    <a id="minimap-node-4-4" class="minimap-node"></a>
+                    <a id="minimap-node-4-5" class="minimap-node"></a>
+                    <a id="minimap-node-4-6" class="minimap-node"></a>
+                    <a id="minimap-node-4-7" class="minimap-node"></a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="main-column" id="middle-column">
+            <div class="middle-column--row-top">
+                <div class="middle-column--row-top-left">
+                    <div class="active-character-container">
+                        <div class="active-characters-label">People in area</div>
+                        <div class="active-characters-list" id='active-characters'></div>
+                    </div>
+                    <div class="active-items-container">
+                        <div class="active-items-label">Items in area</div>
+                        <div class="active-items-list" id='active-items'></div>
+                    </div>
+                </div>
+                <div class="middle-column--row-top-mid">
+                    <div class="trade-window">
+                        <div class="trade-window--onhover-overlay"></div>
+                        <div class="trade-window--top">
+                            <div class="trade-window--grids">
+                                <div class="trade-window--grids-row" id='actorTradeSlots'>
+                                </div>
+                                <div class="trade-window--grids-balance">
+                                    <i class="fa fa-arrow-circle-up"></i>
+                                    <p id="trade-string"></p>
+                                    <button id='complete-trade'>Trade</button>
+                                </div>
+                                <div class="trade-window--grids-row" id='playerTradeSlots'>
+                                    <div class="trade-window--grids-drag-here">
+                                        <p class="trade-window--grids-drag-here-text">Drag items here to trade.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trade-window--portrait"></div>
+                        </div>
+                        <div class="trade-window--info"></div>
+                    </div>
+                    <!-- <img class="main-image" src="https://via.placeholder.com/800x600"> -->
+                </div>
+                <div class="middle-column--row-top-right">
+
+                </div>
+            </div>
+            <div class="middle-column--row-middle">
+                <div class="middle-column--row-middle-main-text-area" id="main-text-area"></div>
+                <div class="middle-column--row-middle-button-area" id="main-button-area"></div>
+            </div>
+            <div class="middle-column--row-bottom--exp-bar">
+                <div class="middle-column--row-bottom--exp-bar-active" id='exp-bar-bg'></div>
+                <div class="middle-column--row-bottom--exp-bar-active" id='exp-bar'>
+                    <div class="middle-column--row-bottom--exp-bar-label" id='exp-bar-label'></div>
+                </div>
+            </div>
+            <div class="middle-column--row-bottom" id="hotbar">
+                <!-- HOTBAR -->
+                <!-- <a href="#" class="player-hotbar-item" id="player-hotbar-basicAttack">
+                    <img class="hotbar-icon" src="./img/basic-attack.png">
+                </a> -->
+            </div>
+        </div>
+        <div class="main-column" id="right-column">
+            <div class="thing-card thing-card--NPC" id="actor-focus-card">
+                <div class='thing-card--NPC-info-name' id='actor-actorName'></div>
+                <div class='thing-card--NPC-info-type-class-race' id='actor-raceLevelClassString'></div>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab"
+                            aria-controls="home" aria-selected="true">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="actions-tab" data-toggle="tab" href="#actions" role="tab"
+                            aria-controls="profile" aria-selected="false">Actions</a>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane show active" id="info" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="thing-card--NPC-stat-row">
+                            <p class="thing-card--player-stat-row-type">Health: </p>
+                            <div class="player-health-bar-bg">
+                                <div class="player-health-bar-active" id="actor-healthBar"></div>
+                            </div>
+                            <p class="thing-card--player-stat-row-value"><span id="actor-health"></span> /
+                                <span id="actor-maxHealth"></span</p> </div> <div class="thing-card--NPC-stat-row">
+
+
+
+                        </div>
+                        <div class="thing-card--NPC-stat-row">
+                            <p class="thing-card--player-stat-row-type">Mana: </p>
+                            <div class="player-mana-bar-bg">
+                                <div class="player-mana-bar-active" id="actor-manaBar"></div>
+                            </div>
+                            <p class="thing-card--player-stat-row-value"><span id="actor-mana"></span> / <span
+                                    id="actor-maxMana"></span</p> </div> </div> <div class="tab-pane " id="actions"
+                                        role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="actor-actions-tab">
+                                        <button type="button" class="btn btn-primary actor-button"
+                                            id='request-duel'>Request
+                                            Duel</button>
+                                        <button type="button" class="btn btn-primary actor-button" id='talk-to'>Talk
+                                            To</button>
+                                        <button type="button" class="btn btn-primary actor-button"
+                                            id='trade'>Trade</button>
+                                        <button type="button" class="btn btn-primary actor-button" id='add-friend'>Add
+                                            Friend</button>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thing-card thing-card--activity-log">
+                    <p class="thing-card--activity-log-title">Activity Log</p>
+                    <div class="thing-card--activity-log-body" id="activity-log"> </div>
+                </div>
+                <div class="thing-card thing-card--player">
+                    <div class="thing-card--player-row1">
+                        <p class="thing-card--player-info-name" id="player-actorName">[error]</p>
+                        <p class="thing-card--player-info-level-class" id="player-raceLevelClassString">[error]</p>
+                    </div>
+                    <div class="thing-card--player-info-row2">
+                        <div>
+                            <div class="thing-card--player-stat-row">
+                                <p class="thing-card--player-stat-row-type">Health: </p>
+                                <div class="player-health-bar-bg">
+                                    <div class="player-health-bar-active" id="player-healthBar"></div>
+                                </div>
+                                <p class="thing-card--player-stat-row-value"><span id="player-health"></span> /
+                                    <span id="player-maxHealth"></span</p> </div> <div
+                                            class="thing-card--player-stat-row">
+
+
+                            </div>
+                            <div class="thing-card--player-stat-row">
+                                <p class="thing-card--player-stat-row-type">Mana: </p>
+                                <div class="player-mana-bar-bg">
+                                    <div class="player-mana-bar-active" id="player-manaBar"></div>
+                                </div>
+                                <p class="thing-card--player-stat-row-value"><span id="player-mana"></span> / <span
+                                        id="player-maxMana"></span></p>
+
+                            </div>
+                            <div class="thing-card--player-stat-row thing-card--player-stat-row-SP">
+                                <p class="thing-card--player-stat-row-type">SP :</p>
+                                <div id="spContainer"></div>
+                            </div>
+                        </div>
+                        <div class="thing-card--player-info-armor-dodge-focus">
+                            <p>Armor:</p>
+                            <p>Dodge %:</p>
+                            <p>Focus %:</p>
+                        </div>
+                        <div class="thing-card--player-info-armor-dodge-focus-values">
+                            <p class="player-armor-value" id="player-armor">[error]</p>
+                            <p class="player-dodge-value" id="player-dodge">[error]</p>
+                            <p class="player-focus-value" id="player-focus">[error]</p>
+                        </div>
+                    </div>
+                    <div class="thing-card--player-info-row3">
+                        <div class="thing-card--player-info-row3-row">
+                            <p class="width-20">Strength: </p>
+                            <p class="width-20 left-margin-10 player-strength-value" id="player-strength">20</p>
+                            <p class="width-20">Charisma: </p>
+                            <p class="width-20 left-margin-10 player-charisma-value" id="player-charisma">20</p>
+                        </div>
+                        <div class="thing-card--player-info-row3-row">
+                            <p class="width-20">Dexterity: </p>
+                            <p class="width-20 left-margin-10 player-dexterity-value" id="player-dexterity">20
+                            </p>
+                            <p class="width-20">Wisdom: </p>
+                            <p class="width-20 left-margin-10 player-wisdom-value" id="player-wisdom">20</p>
+                        </div>
+                        <div class="thing-card--player-info-row3-row">
+                            <p class="width-20">Constitution: </p>
+                            <p class="width-20 left-margin-10 player-constitution-value" id="player-constitution">20
+                            </p>
+                            <p class="width-20">Intelligence: </p>
+                            <p class="width-20 left-margin-10 player-intelligence-value" id="player-intelligence">20
+                            </p>
+                        </div>
+                    </div>
+                    <div class="thing-card--player-info-row4">
+                        <p class="thing-card--player-info-active-effects-label">Active Effects:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script type="module" src="./js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
