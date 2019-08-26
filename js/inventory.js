@@ -69,7 +69,7 @@ export class Inventory {
         }).indexOf(ref2);
 
         let foo = this.items[index1];
-        this.items[index1] = this.items[index2]
+        this.items[index1] = this.items[index2];
         this.items[index2] = foo;
     }
 
@@ -83,7 +83,7 @@ export class Inventory {
         this.calcArmor();
         this.calcAttack();
         updateEquipment(this.player);
-        updatePlayerUI(this.player)
+        updatePlayerUI(this.player);
     }
 
     calcArmor() {
