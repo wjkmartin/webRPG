@@ -2,7 +2,7 @@ export default
 {
     abilityName: 'firebolt',
     prettyName: 'Firebolt',
-    icon: '../img/firebolt.png',
+    icon: '/webRPG/img/firebolt.png',
     damage: function(actor) {
         'use strict';
         return actor.vars. Math.floor(actor.vars.intelligence * Math.random() * 1.25);
