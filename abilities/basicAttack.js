@@ -11,7 +11,7 @@ export default
         ];
         return list[Math.floor(Math.random()*list.length)];
     },
-    icon: '/img/basic-attack.png',
+    icon: '/webRPG/img/basic-attack.png',
     damage: function(actor) {
         'use strict';
         return Math.floor(actor.vars.strength * Math.random()) + actor.vars.attackFromEquipment;
