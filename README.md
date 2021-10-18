@@ -5,7 +5,7 @@ I learned a lot about the details and frustrations of event listeners, the stran
 
 [Play it here thanks to the ever wonderful Github Pages](https://wjkmartin.github.io/webRPG/game.html)
 
-I wanted to focus on things other than responsive design, so it's hard locked to 1920x1080 resolution. It's mostly on my Github still because I like to look at it and see how far I've come, it's not a good indication of my current skillset. Please see Fantasy Quest 2, linked below.
+I wanted to focus on things other than responsive design, so it's hard locked to 1920x1080 resolution. It's mostly on my Github still because I like to look at it and see how far I've come, it's not a good indication of my current skillset. Please see Fantasy Quest 2, linked below for that.
 
 If you like the idea of this, I'm currently working on a different but similar project, [Fantasy Quest 2](https://github.com/wjkmartin/fantasy-quest-2) which is a React / Redux based game engine (but mostly just a game at this point). 
 
